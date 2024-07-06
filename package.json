@@ -1,0 +1,51 @@
+{
+  "name": "@mxydl2009/lib-template",
+  "version": "1.1.0",
+  "description": "a template for writing javascript library",
+  "module": "dist/index.mjs",
+  "main": "dist/index.cjs",
+  "scripts": {
+    "docs": "jsdoc -c jsdocConfig.json",
+    "live": "live-server docs --watch docs",
+    "preview": "npm run docs && npm run live",
+    "watch": "nodemon --watch ./src --exec \"npm run docs\" & npm run live",
+    "build": "rollup -c rollup.config.mjs",
+    "docs:md": "jsdoc2md src/*.js > README.md",
+    "test": "mocha test/*.test.js",
+    "coverage": "nyc npm run test"
+  },
+  "keywords": [
+    "javascript",
+    "library",
+    "es module",
+    "commonjs",
+    "template"
+  ],
+  "files": [
+    "*"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/plugin-transform-runtime": "^7.22.4",
+    "@babel/preset-env": "^7.22.4",
+    "@babel/register": "^7.21.0",
+    "@babel/runtime": "^7.22.3",
+    "@babel/runtime-corejs3": "^7.22.3",
+    "@istanbuljs/nyc-config-babel": "^3.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "babel-plugin-istanbul": "^7.0.0",
+    "chai": "^4.3.7",
+    "jsdoc": "^4.0.3",
+    "jsdoc-to-markdown": "^8.0.1",
+    "live-server": "^1.2.2",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.1.4",
+    "nyc": "^15.1.0",
+    "rimraf": "^5.0.7",
+    "rollup": "^4.18.0"
+  }
+}
