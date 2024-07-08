@@ -1,6 +1,6 @@
 {
   "name": "@mxydl2009/lib-template",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "a template for writing javascript library",
   "module": "dist/index.mjs",
   "main": "dist/index.cjs",
@@ -10,7 +10,7 @@
     "preview": "npm run docs && npm run live",
     "watch": "nodemon --watch ./src --exec \"npm run docs\" & npm run live",
     "build": "rollup -c rollup.config.mjs",
-    "docs:md": "jsdoc2md src/*.js > README.md",
+    "docs:md": "jsdoc2md src/*.js > api.md",
     "test": "mocha test/*.test.js",
     "coverage": "nyc npm run test"
   },
