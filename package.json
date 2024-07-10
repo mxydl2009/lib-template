@@ -12,7 +12,8 @@
     "build": "rollup -c rollup.config.mjs",
     "docs:md": "jsdoc2md src/*.js > api.md",
     "test": "mocha test/*.test.js",
-    "coverage": "nyc npm run test"
+    "coverage": "nyc npm run test",
+    "postversion": "git push --tags"
   },
   "keywords": [
     "javascript",
@@ -21,9 +22,9 @@
     "commonjs",
     "template"
   ],
-  "files": [
-    "*"
-  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.22.1",
