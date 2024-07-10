@@ -1,6 +1,6 @@
 {
   "name": "@mxydl2009/lib-template",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "a template for writing javascript library",
   "module": "dist/index.mjs",
   "main": "dist/index.cjs",
