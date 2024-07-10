@@ -22,6 +22,9 @@
     "commonjs",
     "template"
   ],
+  "repository": {
+    "url": "https://github.com/mxydl2009/lib-template.git"
+  },
   "publishConfig": {
     "access": "public"
   },
