@@ -13,7 +13,8 @@
     "docs:md": "jsdoc2md src/*.js > api.md",
     "test": "mocha test/*.test.js",
     "coverage": "nyc npm run test",
-    "postversion": "git push --tags && npm publish"
+    "preversion": "node scripts/prepublish-check.js",
+    "postversion": "node scripts/post-version.js"
   },
   "keywords": [
     "javascript",
@@ -50,6 +51,10 @@
     "nodemon": "^3.1.4",
     "nyc": "^15.1.0",
     "rimraf": "^5.0.7",
-    "rollup": "^4.18.0"
+    "rollup": "^4.18.0",
+    "ora": "^5.4.1",
+    "simple-git": "^3.25.0",
+    "npmlog": "^7.0.1",
+    "inquirer": "^8.0.0"
   }
 }
